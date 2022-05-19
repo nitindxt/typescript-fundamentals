@@ -34,3 +34,9 @@ maybeCar;
 assertsIsCarLike(maybeCar);
 maybeCar;
 // ^?
+
+/* 
+Conceptually, what’s going on behind the scenes is very similar. By using this special syntax to describe the return type, we are informing TypeScript that if assertsIsCarLike throws an error, it should be taken as an indication that the valueToTest is NOT type-equivalent to CarLike.
+
+Therefore, if we get past the assertion and keep executing code on the next line, the type changes from unknown to CarLike.
+*/
